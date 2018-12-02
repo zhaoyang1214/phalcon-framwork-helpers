@@ -1,0 +1,24 @@
+{
+	"keywords" : [
+		"phalcon-helpers"
+	],
+	"autoload" : {
+		"psr-4" : {
+			"PhalconHelpers\\" : "src"
+		}
+	},
+    "name": "phalcon-framwork/helpers",
+    "description": "phalcon helpers for phalcon-framwork",
+    "type": "phalcon-helpers",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "zhaoyang",
+            "email": "1134856531@qq.com",
+	      	"homepage": "https://github.com/zhaoyang1214"
+        }
+    ],
+    "require": {
+    	"php" : ">=7.0"
+    }
+}
