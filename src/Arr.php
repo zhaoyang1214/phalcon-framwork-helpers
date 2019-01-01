@@ -11,7 +11,7 @@ class Arr
 
     /**
      * 将数组中键名下划线转换为驼峰
-     * 
+     *
      * @param array $arr            
      * @param string $delimiter
      *            字符分隔符
@@ -34,5 +34,29 @@ class Arr
             $array[$k] = $value;
         }
         return $array;
+    }
+
+    /**
+     * 根据一组一维数组的值取另一个多维数组对应键名的值并组成新数组
+     *
+     * @param array $keys
+     *            一维数组
+     * @param array $array
+     *            多维数组
+     * @param bool $setNull
+     *            键名在数组中不存在时是否加入返回数组
+     * @return array
+     */
+    public static function extract(array $keys, array $array, bool $setNull = false)
+    {
+        $newArray = [];
+        foreach ($keys as $key) {
+            if (array_key_exists($key, $array)) {
+                $newArray[$key] = $array[$key];
+            } else if ($setNull) {
+                $newArray[$key] = null;
+            }
+        }
+        return $newArray;
     }
 }
